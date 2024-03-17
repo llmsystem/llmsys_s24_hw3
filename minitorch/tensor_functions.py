@@ -48,7 +48,7 @@ class Function:
         raw_vals = []
         need_grad = False
         for v in vals:
-            if v.requires_grad:
+            if v.requires_grad():
                 need_grad = True
             raw_vals.append(v.detach())
 
